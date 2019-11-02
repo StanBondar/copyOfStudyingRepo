@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    all: unset;
+    font-family: Verdana, Courier;
+    font-size: 18px;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    display: inline-block;
+}
+
+/* General styles */
+
+.background {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    width: 1062px;
+    margin: 0 auto;
+}
+
+.clearfix::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* HEADER STYLES */
+
+.top {
+    margin-bottom: 45px;
+}
+
+.top-logo {
+    float: left;
+    padding-top: 49px;
+}
+
+.top-logo-link {
+    font-family: Verdana, Courier;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ffffff;
+    /*position: relative;*/
+    padding-left: 88px;
+    background-image: url(../img/logo.png);
+    background-size: auto 88%;
+    background-position-y: 3px;
+    background-repeat: no-repeat;
+    transition: 0.3s ease-in;
+}
+
+.top-logo-link:hover{
+    color: #f26522;
+    background-image: none;
+    background-image: url(../img/logo-hover.png);
+    position: relative;
+    background-size: auto 88%;
+    background-position-y: 3px;
+    background-repeat: no-repeat;
+
+}
+
+.top-logo-Milan {
+    display: block;
+    font-size: 29px;
+}
+
+.top-contact {
+    padding-top: 57px;
+    display: inline-block;
+    text-align: right;
+    float: right;
+}
+.top-contact>a {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Verdana, Courier;
+    color: #ffffff;
+}
+
+/* GALLERY (MIDDLE) STYLES */
+
+.gallery-offer {
+    display: inline-block;
+    width: 308px;
+}
+
+.gallery-offer-img{
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.gallery-offer-name {
+    display: block;
+    text-align: center;
+}
