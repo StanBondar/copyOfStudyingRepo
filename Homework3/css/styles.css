@@ -22,7 +22,7 @@ a{
     background-repeat: no-repeat;
     background-size: 100%;
     width: 100vw;
-    height: 100vh;
+    height: 100vw;
 }
 
 .container {
@@ -68,7 +68,7 @@ a{
     color: #f26522;
     background-image: none;
     background-image: url(../img/logo-hover.png);
-    position: relative;
+    /*position: relative;*/
     background-size: auto 88%;
     background-position-y: 3px;
     background-repeat: no-repeat;
@@ -100,12 +100,78 @@ a{
     width: 308px;
 }
 
+.gallery-offer:nth-child(1), .gallery-offer:nth-child(2),
+.gallery-offer:nth-child(4), .gallery-offer:nth-child(5) {
+    margin-right: 62px;
+}
+
+.gallery-offer:nth-child(1),
+.gallery-offer:nth-child(2), .gallery-offer:nth-child(3) {
+    margin-bottom: 55px;
+}
+
 .gallery-offer-img{
     margin-bottom: 20px;
     font-size: 18px;
+    position: relative;
+}
+
+.gallery-offer-img-file {
+    border: 1px solid red;
+}
+
+.gallery-offer:hover div{
+    display: block;
+}
+
+.gallery-offer:hover a.gallery-offer-name{
+    color: #f26522;
 }
 
 .gallery-offer-name {
     display: block;
     text-align: center;
 }
+
+.gallery-offer-hidden {
+    display: none;
+    position: absolute;
+    /*line-height: 63px;*/
+    top: 139px;
+    width: 100%;
+    height: 63px;
+    background-color: #f26522;
+}
+
+.gallery-offer-cover {
+    display: inline-block;
+    padding: 9px 0 0 21px;
+    width: 38px;
+    float: left;
+}
+
+.gallery-offer-from {
+    font-size: 10px;
+    margin-bottom: 7px;
+}
+
+.gallery-offer-price {
+    font-size: 20px;
+    margin-top: 7px;
+}
+
+.gallery-offer-details {
+    font-size: 14px;
+    float: right;
+    padding: 35px 40px 0 0;
+    position: relative;
+}
+
+.gallery-offer-details::after {
+    content: '\FF1E';
+    color: #f9b291;
+    font-size: 13px;
+    position: absolute;
+    right: 18px;
+}
+
