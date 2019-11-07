@@ -21,8 +21,8 @@ a{
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../img/background.png);
     background-repeat: no-repeat;
     background-size: 100%;
-    width: 100vw;
-    height: 100vw;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
@@ -98,6 +98,7 @@ a{
 .gallery-offer {
     display: inline-block;
     width: 308px;
+    margin-bottom: 61px;
 }
 
 .gallery-offer:nth-child(1), .gallery-offer:nth-child(2),
@@ -117,8 +118,10 @@ a{
 }
 
 .gallery-offer-img-file {
-    border: 1px solid red;
+    border: 1px solid white;
 }
+
+/* HOVER FOR GALLERY */
 
 .gallery-offer:hover div{
     display: block;
@@ -127,6 +130,10 @@ a{
 .gallery-offer:hover a.gallery-offer-name{
     color: #f26522;
 }
+
+
+
+/*---------------------------------------------*/
 
 .gallery-offer-name {
     display: block;
@@ -175,3 +182,10 @@ a{
     right: 18px;
 }
 
+.copy {
+    font-size: 12px;
+    font-family: Verdana, Courier;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+}
