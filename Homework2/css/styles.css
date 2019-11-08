@@ -40,7 +40,6 @@ a {
     height: 69px;
     background-color: #35444f;
     text-align: center;
-    padding: auto;
     margin-bottom: 51px;
 }
 
@@ -50,13 +49,15 @@ a {
 
 li.top-menu-list-point {
     padding: 26px 41px;
-    transition: 1s;
+    transition: background-color 0.3s;
 }
 
 li.top-menu-list-point:hover {
     background-color: #222f3a;
     border-left: 1px solid #818181;
     border-right: 1px solid #818181;
+    height: 69px
+
 }
 
 .top-menu-list-point>a{
