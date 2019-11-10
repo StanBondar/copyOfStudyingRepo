@@ -55,6 +55,11 @@ body {
     font-size: 20px;
     font-family: Verdana-Bold, system-ui;
     color: var(--color1);
+    transition: color 0.3s ease-in;
+}
+
+.top-logo-link:hover {
+    color: var(--color2);
 }
 
 .top-right {
@@ -272,6 +277,12 @@ body {
     height: 46px;
     padding-left: 17px;
     margin-bottom: 9px;
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+}
+
+.sign-up-form-field:focus {
+    box-shadow: 0 3px 2px 1px #d6d6d6;
 }
 
 .sign-up-form-field::placeholder {
