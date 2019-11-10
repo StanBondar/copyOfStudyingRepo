@@ -202,7 +202,11 @@ body {
     background-color: #305db8;
     padding-left: 66px;
     position: relative;
-    /*padding: 16px 17px 17px 66px;*/
+    transition: background-color 0.3s ease-in;
+}
+
+.sign-up-social-fb:hover{
+    background-color: #264b96;
 }
 
 .sign-up-social-fb::before {
@@ -222,6 +226,11 @@ body {
     background-color: #df4a32;
     padding-left: 60px;
     position: relative;
+    transition: background-color 0.3s ease-in;
+}
+
+.sign-up-social-g:hover {
+    background-color: #c3412c;
 }
 
 .sign-up-social-g::before {
