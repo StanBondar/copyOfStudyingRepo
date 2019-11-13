@@ -1,0 +1,218 @@
+@import "reset.css";
+
+:root {
+    --color11: #89c331;
+    --color22: #f04a56;
+    --color33: #20807c;
+    --color44: #fafafa;
+    --color55: #f2f2f2;
+    --color66: #e3e3e3;
+    --color77: #eeeeee;
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+table, th, td {
+    text-align: center;
+}
+
+td{
+    color: #484848;
+    height: 69px;
+    padding: 28px 0;
+}
+
+thead {
+color: #484848;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #3a4965;
+    padding-top: 4%;
+}
+
+.table {
+    color: #848484;
+    text-transform: uppercase;
+    margin: 0 auto;
+}
+
+.first-column {
+    width: 310px;
+}
+
+.other-columns {
+    width: 277px;
+}
+
+.shadow-wrapper {
+    border-left: 2px solid rgba(17, 17, 17, 0.05);
+}
+
+/*Head style*/
+.table-heading {
+    color: #ffffff;
+    font-family: Arimo, Courier, system-ui;
+    font-weight: 700;
+    width: 277px;
+    height: 70px;
+    padding: 26px 0;
+}
+
+.table-heading-2, .table-heading-4 {
+    font-size: 24px;
+}
+
+.table-heading-1 {
+    vertical-align: middle;
+    color: #484848;
+    font-family: Arimo, Courier, system-ui;
+    font-weight: 700;
+    background-color: var(--color44);
+}
+
+.th-span-1 {
+    font-size: 18px;
+}
+
+.th-span-2 {
+    font-size: 30px;
+}
+
+.table-heading-2 {
+    background-color: var(--color11);
+    width: 279px;
+    padding: 24px 0;
+}
+
+.table-heading-3 {
+    font-size: 30px;
+    background-color: var(--color22);
+}
+
+.table-heading-4 {
+    background-color: var(--color33);
+}
+
+.second-line {
+    background-color: var(--color44);
+    padding-top: 13px;
+}
+
+.price {
+    height: 86px;
+}
+
+.price-text {
+    font-size: 60px;
+    font-family: Arimo, Courier, system-ui;
+    font-weight: 700;
+
+}
+
+.sup-price {
+    font-size: 24px;
+    vertical-align: super;
+}
+
+.per-month {
+    font-size: 18px;
+    font-weight: 400;
+    position: relative;
+    right: 30px;
+}
+/*-----------------*/
+
+
+.third-line {
+    background-color: var(--color55);
+}
+
+.fourth-line {
+    background-color: var(--color66);
+}
+
+.fifth-line {
+    background-color: var(--color55);
+}
+
+.sixth-line {
+    background-color: var(--color66);
+}
+
+.seventh-line {
+    background-color: var(--color55);
+}
+
+.eighth-line {
+    background-color: var(--color66);
+}
+
+.cell-9-1{
+    background-color: #dddddd;
+}
+
+.cell-9-2 {
+    background-color: var(--color77);
+}
+
+.cell-9-3 {
+    background-color: #f4f4f4;
+}
+
+.cell-9-4 {
+    background-color: var(--color77);
+}
+
+.footer-cell{
+    padding: 0;
+}
+
+.fa {
+    color: #848484;
+}
+
+.btn {
+    font-size: 16px;
+    font-family: Arimo, Courier, system-ui;
+    font-weight: 700;
+    border: 0;
+    border-radius: 5px;
+    width: 192px;
+    height: 49px;
+    vertical-align: bottom;
+    padding-top: 14px;
+    margin: 30px 42px;
+    color: #ffffff;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease-in;
+}
+
+.btn:hover{
+    opacity: 0.7;
+}
+
+.btn1 {
+    background-color: #484848;
+    box-shadow: 0 6px 0px #404040;
+}
+
+.btn2 {
+    background-color: var(--color11);
+    box-shadow: 0 6px 0px #79b027;
+}
+
+.btn3 {
+    background-color: var(--color22);
+    box-shadow: 0 6px 0px #df3a46;
+}
+
+.btn4 {
+    background-color: var(--color33);
+    box-shadow: 0 6px 0px #16736f;
+}
