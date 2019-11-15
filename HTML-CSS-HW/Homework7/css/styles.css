@@ -1,0 +1,65 @@
+body{
+    margin: 0;
+}
+
+.container{
+    width: 100vw;
+    height: 100vw;
+    background-color: black;
+}
+
+.titles {
+    position: absolute;
+    width: 18em;
+    height: 50em;
+    bottom: 0;
+    left: 50%;
+    margin-left: -9em;
+    font-size: 350%;
+    font-weight: bold;
+    text-align: justify;
+    overflow: hidden;
+    transform-origin: 50% 100%;
+    transform: perspective(300px) rotateX(25deg);
+    background-color: black;
+}
+
+.titles:after {
+    position: absolute;
+    content: ' ';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 60%;
+    background-image: linear-gradient(top, rgba(0, 0, 0, 1) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+.titlecontent {
+    position: absolute;
+    top: 60%;
+    animation: scroll 30s linear 3s infinite;
+}
+
+.head{
+    text-align: center;
+}
+
+p{
+    color: goldenrod;
+    text-align: justify;
+    font-size: 60px;
+}
+
+@keyframes scroll {
+    0% {
+        top: 90%;
+    }
+    100% {
+        top: -70%;
+    }
+}
+
+.background-video {
+    display: none;
+}
