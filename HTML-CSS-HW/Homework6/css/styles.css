@@ -10,6 +10,7 @@
 
 .container {
     width: 100vw;
+    /*width: 1900px;*/
 }
 
 /*Top styles*/
@@ -234,7 +235,7 @@
 .top-rated {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: 136px 190px;
+    grid-template-rows: 136px auto;
 }
 
 .top-rated-heading {
@@ -244,9 +245,13 @@
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    grid-column: 1/7;
+    grid-column: 1/8;
     align-self: center;
     justify-self: center;
+}
+
+.top-rated-img {
+    width: calc(100vw/7);
 }
 
 /*Hot news section*/
