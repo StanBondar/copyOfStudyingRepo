@@ -10,7 +10,15 @@
 
 .container {
     width: 100vw;
-    /*width: 1900px;*/
+    /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+    height: 100vh;
+    /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+    overflow-x: hidden;
+    /* Enable scrolling on the page. */
+    overflow-y: auto;
+    /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+    perspective: 2px;
 }
 
 /*Top styles*/
@@ -77,15 +85,41 @@
 }
 
 .latest-news {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header-bg.jpeg);
-    background-position: bottom;
-    background-attachment: fixed;
+    /*background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header-bg.jpeg);*/
+    /*background-position: bottom;*/
+    /*background-attachment: fixed;*/
     height: 370px;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    position: relative;
+    overflow: hidden;
 }
+
+.parallax::after {
+    /* Display and position the pseudo-element */
+    content: " ";
+    position: absolute;
+    top: -300px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    /* Move the pseudo-element back away from the camera,
+     * then scale it back up to fill the viewport.
+     * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+    transform: translateZ(-1px) scale(1.5);
+    /* Force the background image to fill the whole element. */
+    background-size: 100%;
+    /* Keep the image from overlapping sibling elements. */
+    z-index: -1;
+}
+
+.bg1::after {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/header-bg.jpeg);
+    background-position: center;
+}
+
 
 .latest-news-content-wrapper {
     display: flex;
@@ -184,12 +218,18 @@
 
 .popular-clients {
     height: 590px;
-    background-image: url(../img/parallax-bg.jpeg);
-    background-attachment: fixed;
-    background-position: center;
+    /*background-image: url(../img/parallax-bg.jpeg);*/
+    /*background-attachment: fixed;*/
+    /*background-position: center;*/
     display: grid;
     grid-template-rows: 2fr 1fr 2fr;
     grid-template-columns: 1fr;
+    position: relative;
+    overflow: hidden;
+}
+
+.bg2::after {
+    background-image: url(../img/parallax-bg.jpeg);
 }
 
 .popular-clients-heading {
