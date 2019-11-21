@@ -33,6 +33,11 @@ thead {
     color: #484848;
 }
 
+.font-styler {
+    font-size: 16px;
+    font-family: Arimo, Courier, system-ui;
+}
+
 .container {
     width: 100vw;
     height: 100vh;
