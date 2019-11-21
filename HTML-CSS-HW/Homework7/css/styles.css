@@ -37,7 +37,7 @@ body{
 
 .titlecontent {
     position: absolute;
-    top: 60%;
+    top: 100%;
     animation: scroll 30s linear 3s infinite;
 }
 
@@ -53,7 +53,7 @@ p{
 
 @keyframes scroll {
     0% {
-        top: 90%;
+        top: 98%;
     }
     100% {
         top: -70%;
