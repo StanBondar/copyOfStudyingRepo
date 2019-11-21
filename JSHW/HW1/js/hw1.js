@@ -25,15 +25,14 @@
         name = prompt("What is your name?", "Guest");
     }
 
-    if (Number.isNaN(age)==true){
+    if (Number.isNaN(age)){
         age = +prompt("How old are you?", "1");
     }
 
     if (age<18){
         alert("You are not allowed to visit this website!");
     }else if(age>=18&&age<=22){
-        let decision = confirm("Are you sure you want to continue?");
-        if(decision===true){
+        if(confirm("Are you sure you want to continue?")){
             alert(`Welcome, ${name}`);
         }else{
             alert("You are not allowed to visit this website!");
