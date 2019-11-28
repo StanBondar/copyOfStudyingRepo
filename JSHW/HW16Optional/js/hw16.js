@@ -7,12 +7,12 @@ while (Number.isNaN(+factorialNumber) || factorialNumber === '' || factorialNumb
 }
 
 let factorial = function (number) {
-    let result = 1;
-    if (number === 1){
-        return result;
+    if (number === 0){
+        return 1;
+    }else if(number<0){
+        return -1;
     }else {
-        result = number * factorial(number-1);
-        return result;
+        return number * factorial(number-1);;
     }
 }
 
