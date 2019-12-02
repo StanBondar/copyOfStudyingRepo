@@ -26,18 +26,18 @@
 
 function createNewUser() {
     let newUser = {
-        firstName : prompt('Enter first name below:'),
-        lastName : prompt('Enter last name below: '),
+        firstName : "FirstName",
+        lastName : "LastName",
         getLogin : function () {
             let login = this.firstName.charAt(0)+this.lastName;
             return login.toLowerCase();
         },
-        setFirstName : function (firstName) {
-            this.firstName = firstName;
+        setFirstName : function () {
+            this.firstName = prompt('Enter first name below:');
         },
-        setLastName : function (lastName) {
-            this.lastName = lastName;
-        }
+        setLastName : function () {
+            this.lastName = prompt('Enter last name below: ');
+        },
     }
     return newUser;
 }
