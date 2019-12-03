@@ -46,4 +46,4 @@ function addingElements(arr){
     });
 }
 
-// addingElements(testArray);
+addingElements(testArray);
