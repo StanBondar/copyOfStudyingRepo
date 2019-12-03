@@ -39,11 +39,15 @@ const testArray = ['hello', 'world', 'Kiev', 'Kharkiv', 'Odessa', 'Lviv'];
 function addingElements(arr){
     let ulist = document.createElement('ul');
     document.body.appendChild(ulist);
-    arr.forEach(element => {
+    arr.map(element => {
         let list = document.createElement('p');
         list.innerText = element;
         ulist.appendChild(list);
     });
+}
+
+function addingElement1(arr) {
+
 }
 
 addingElements(testArray);
