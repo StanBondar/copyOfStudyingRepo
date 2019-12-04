@@ -38,12 +38,18 @@ const testArray = [`hello`, `world`, `Kiev`, `Kharkiv`, `Odessa`, `Lviv`];
 let ulist = document.createElement(`ul`);
 document.body.prepend(ulist);
 
+// function addingElements(arr){
+//     arr.map(element => {
+//         let list = document.createElement(`li`);
+//         list.innerText = `${element}`;
+//         ulist.appendChild(list);
+//     });
+// }
+
 function addingElements(arr){
-    arr.map(element => {
-        let list = document.createElement(`li`);
-        list.innerText = `${element}`;
-        ulist.appendChild(list);
-    });
+    let newArray = [];
+        newArray = arr.map(element => (`<li>${element}</li>`));
+        ulist.innerHTML = newArray.join('');
 }
 
 let counter = 10;
