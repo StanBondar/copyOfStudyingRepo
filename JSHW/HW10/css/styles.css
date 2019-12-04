@@ -1,0 +1,41 @@
+.password-form {
+    display: flex;
+}
+
+.input-wrapper {
+    position: relative;
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    margin-right: 20px;
+}
+
+.input-wrapper input {
+    min-width: 120px;
+    padding: 10px;
+    margin-bottom: 24px;
+}
+
+.input-wrapper i {
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    color: grey;
+}
+
+.btn {
+    width: 150px;
+}
+
+.second-field {
+    position: relative;
+}
+
+.error-message {
+    position: absolute;
+    top: 37px;
+    left: 106px;
+    color: red;
+    font-size: 15px;
+    margin-left: 40px;
+}
