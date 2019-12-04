@@ -34,20 +34,32 @@
 
 //DOM - програмный интерфейс траницы HTML, который представляет её в таком виде, что скрипт может изменять структуру документа.
 
-const testArray = ['hello', 'world', 'Kiev', 'Kharkiv', 'Odessa', 'Lviv'];
+const testArray = [`hello`, `world`, `Kiev`, `Kharkiv`, `Odessa`, `Lviv`];
+let ulist = document.createElement(`ul`);
+document.body.prepend(ulist);
 
 function addingElements(arr){
-    let ulist = document.createElement('ul');
-    document.body.appendChild(ulist);
     arr.map(element => {
-        let list = document.createElement('p');
-        list.innerText = element;
+        let list = document.createElement(`li`);
+        list.innerText = `${element}`;
         ulist.appendChild(list);
     });
 }
 
-function addingElement1(arr) {
+let counter = 10;
+const onPageCounter = document.createElement('p');
+onPageCounter.innerText = `Time left ${counter}s`;
+document.body.prepend(onPageCounter);
 
+let countingOnPage = function () {
+    counter--;
+    onPageCounter.innerText = `Time left ${counter}s`;
+}
+
+let removeUl = function () {
+    ulist.remove();
 }
 
 addingElements(testArray);
+let timer = setInterval(countingOnPage, 1000);
+setTimeout(() => {clearInterval(timer); removeUl()}, 10000);
