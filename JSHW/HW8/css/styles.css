@@ -1,0 +1,67 @@
+@import "normalize.css";
+
+*{
+    box-sizing: border-box;
+}
+
+.wrapper {
+    display: flex;
+    /*flex-direction: row;*/
+    background-color: #00ffec;
+    width: max-content;
+    height: max-content;
+    padding: 20px;
+}
+
+.span {
+    color: black;
+    margin-right: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.field {
+    padding-left: 5px;
+}
+
+.field-inactive {
+    border: 1px solid gray;
+    color: green;
+}
+
+.field-active {
+    outline: none;
+    border: 2px solid green;
+}
+
+.field-error {
+    border: 2px solid #ff3a00;
+}
+
+.error-message {
+    display: block;
+    font-size: 10px;
+    color: black;
+}
+
+.price-wrapper {
+    padding-left: 5px;
+    border: 0.5px solid grey;
+    border-radius: 10px;
+    width: max-content;
+    line-height: 20px;
+    font-size: 12px;
+}
+
+.delete{
+    padding: 0 3px;
+    border: 0.5px solid grey;
+    border-radius: 15px;
+    margin: 0 5px 0 25px;
+    font-size: 10px;
+    line-height: 16px;
+    cursor: pointer;
+}
