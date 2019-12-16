@@ -1,4 +1,4 @@
-let icons = document.querySelectorAll('.person-carousel-icon-cover');
+let icons = document.querySelector('.icons-cover');
 let iconsPrevTarget = document.querySelector('.active-icon');
 let iconsCoverPrevTarget = document.querySelector('.active-icon-cover');
 let mainIcon = document.querySelector('.what-say-person-icon');
@@ -13,4 +13,4 @@ const iconsHandler = event => {
     mainIcon.setAttribute('src', event.target.getAttribute('src'));
 };
 
-icons[1].addEventListener('click', iconsHandler);
+icons.addEventListener('click', iconsHandler);

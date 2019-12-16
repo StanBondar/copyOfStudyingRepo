@@ -93,6 +93,12 @@
     align-items: center;
 }
 
+.icons-cover {
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+}
+
 .person-carousel-button {
     display: flex;
     justify-content: center;
