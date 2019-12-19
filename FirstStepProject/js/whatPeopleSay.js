@@ -35,6 +35,12 @@ const changeIconsHandler = event => {
     }
 };
 
+// const setNextContent = () => {
+//     description.innerText = descriptions[switcher];
+//     name.innerText = names[switcher];
+//     position.innerText = positions[switcher];
+// };
+
 const setNextIconActive = ()=> {
     let switcher = iconsPrevTarget.getAttribute('data-icon-number');
     iconsPrevTarget.classList.remove('active-icon');
@@ -75,7 +81,23 @@ const setPreviousIconActive = ()=> {
     position.innerText = positions[switcher];
 };
 
-iconsCover.addEventListener('click', changeIconsHandler);
-nextButton.addEventListener('click', setNextIconActive);
-prevButton.addEventListener('click', setPreviousIconActive);
+let nextSlidePlease = setInterval(setNextIconActive, 4000);
+
+const restartInterval = () => {
+    clearInterval(nextSlidePlease);
+    nextSlidePlease = setInterval(setNextIconActive, 4000);
+}
+
+iconsCover.addEventListener('click', ()=>{
+    changeIconsHandler(event);
+    restartInterval();
+});
+nextButton.addEventListener('click', ()=>{
+    setNextIconActive();
+    restartInterval();
+});
+prevButton.addEventListener('click', ()=>{
+    setPreviousIconActive();
+    restartInterval();
+});
 

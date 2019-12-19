@@ -1,8 +1,10 @@
 @import "../slick-1.8.1/slick/slick.css";
+@import "loadingAnimation.css";
 @import "normalize.css";
 @import "header.css";
 @import "topGrid.css";
 @import "everythingReady.css";
+@import "ourAmazingWork.css";
 @import "breakingNews.css";
 @import "ourServices.css";
 @import "whatPeopleSay.css";
@@ -35,5 +37,29 @@
 }
 
 .btn:hover {
+    background-color: #00cbf6;
+}
+
+.load-more-button {
+    width: 165px;
+    height: 60px;
+    font-size: 14px;
+    font-family: Montserrat, system-ui;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+    background-color: #18cfab;
+    line-height: 20px;
+    vertical-align: center;
+}
+
+.fa-plus {
+    font-size: 14px;
+}
+
+.load-more-button:hover {
     background-color: #00cbf6;
 }
