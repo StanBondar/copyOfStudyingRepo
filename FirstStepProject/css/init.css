@@ -15,7 +15,7 @@
 }
 
 :root {
-/* CSS variables*/
+    /* CSS variables*/
 }
 
 /*Global classes*/
@@ -54,12 +54,14 @@
     background-color: #18cfab;
     line-height: 20px;
     vertical-align: center;
+    transition: background-color 0.3s ease-in;
+}
+
+.load-more-button:hover {
+    background-color: #00cbf6;
 }
 
 .fa-plus {
     font-size: 14px;
 }
 
-.load-more-button:hover {
-    background-color: #00cbf6;
-}

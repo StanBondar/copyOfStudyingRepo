@@ -90,6 +90,7 @@
     grid-template-rows: repeat(2, 103px);
     grid-template-areas: 'top'
                             'bottom';
+    transition: opacity 0.3s ease-in;
 }
 
 .amazing-work-gallery-item-hover:hover {
@@ -113,6 +114,7 @@
     justify-content: center;
     align-items: center;
     color: #18cfab;
+    transition: 0.3s ease-in;
 }
 
 .amazing-icon-inner-wrapper:hover {
