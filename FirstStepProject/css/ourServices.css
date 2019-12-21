@@ -56,7 +56,7 @@
     position: relative;
 }
 
-.tabs-title.active::after{
+.tabs-title.active::after {
     content: url('../img/icons/triangle.png');
     position: absolute;
     width: 24px;
@@ -84,10 +84,10 @@
     margin: 0;
 }
 
-.inactive{
+.inactive {
     display: none;
 }
 
-.tabs-title:hover{
+.tabs-title:hover {
     cursor: pointer;
 }

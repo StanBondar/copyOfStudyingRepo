@@ -87,6 +87,10 @@
     transition: 0.3s ease-in;
 }
 
+.top-menu-search {
+    font-size: 18px;
+}
+
 .top-menu-point:hover {
     cursor: pointer;
     color: #18cfab;
@@ -134,7 +138,7 @@
     font-weight: 700;
 }
 
-.heading-1>span{
+.heading-1 > span {
     color: #18cfab;
 }
 

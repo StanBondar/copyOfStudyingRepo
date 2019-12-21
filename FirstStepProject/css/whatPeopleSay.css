@@ -7,12 +7,7 @@
     display: grid;
     grid-template-columns: 1fr 1160px 1fr;
     grid-template-rows: 237px 30px 132px 353px 100px;
-    grid-template-areas:
-            'lside topCenter rside'
-            'lside image rside'
-            'lside description rside'
-            'lside carousel rside'
-            'lside bottom rside';
+    grid-template-areas: 'lside topCenter rside' 'lside image rside' 'lside description rside' 'lside carousel rside' 'lside bottom rside';
 }
 
 .what-say-title {
@@ -140,9 +135,15 @@
 }
 
 @keyframes setActiveIcon {
-    0% {bottom: 0px}
-    50% {bottom: 5px}
-    100% {bottom: 10px}
+    0% {
+        bottom: 0px
+    }
+    50% {
+        bottom: 5px
+    }
+    100% {
+        bottom: 10px
+    }
 }
 
 .active-icon {

@@ -14,8 +14,8 @@ tabsContent.forEach(element => {
     textIndexCounter++;
 });
 
-const tabsHandler = event =>{
-    if(prevTarget){
+const tabsHandler = event => {
+    if (prevTarget) {
         prevTarget.classList.remove('active');
         tabsContent[prevTarget.getAttribute('data-tab-number')].classList.add('inactive');
     }

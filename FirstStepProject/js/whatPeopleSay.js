@@ -18,7 +18,7 @@ const names = ['Nina Petrova', 'Man with jacket', 'HASAN ALI', 'Glasses blonde']
 const positions = ['Photographer', 'Witcher', 'UX Designer', 'Accountant'];
 
 const changeIconsHandler = event => {
-    if(event.target.hasAttribute('src')) {
+    if (event.target.hasAttribute('src')) {
         if (event.target !== iconsPrevTarget) {
             event.target.classList.add('active-icon');
             event.target.parentNode.classList.add('active-icon-cover');
@@ -26,59 +26,65 @@ const changeIconsHandler = event => {
             iconsCoverPrevTarget.classList.remove('active-icon-cover');
             iconsCoverPrevTarget = event.target.parentNode;
             iconsPrevTarget = event.target;
-            mainIcon.setAttribute('src', event.target.getAttribute('src'));
 
-            description.innerText = descriptions[event.target.getAttribute('data-icon-number')];
-            name.innerText = names[event.target.getAttribute('data-icon-number')];
-            position.innerText = positions[event.target.getAttribute('data-icon-number')];
+            $('.what-people-say-description, .what-say-person-name, .what-say-person-position, .what-say-person-icon').fadeTo(300, 0.1);
+            setTimeout(() => {
+                mainIcon.setAttribute('src', event.target.getAttribute('src'));
+                description.innerText = descriptions[event.target.getAttribute('data-icon-number')];
+                name.innerText = names[event.target.getAttribute('data-icon-number')];
+                position.innerText = positions[event.target.getAttribute('data-icon-number')];
+            }, 300);
+            $('.what-people-say-description, .what-say-person-name, .what-say-person-position, .what-say-person-icon').fadeTo(300, 1);
         }
     }
 };
 
-// const setNextContent = () => {
-//     description.innerText = descriptions[switcher];
-//     name.innerText = names[switcher];
-//     position.innerText = positions[switcher];
-// };
-
-const setNextIconActive = ()=> {
+const setNextIconActive = () => {
     let switcher = iconsPrevTarget.getAttribute('data-icon-number');
     iconsPrevTarget.classList.remove('active-icon');
     iconsPrevTarget.parentNode.classList.remove('active-icon-cover');
-    if(+switcher<icons.length-1){
+    if (+switcher < icons.length - 1) {
         switcher++;
-    }else if (+switcher === icons.length-1){
+    } else if (+switcher === icons.length - 1) {
         switcher = 0;
     }
     document.querySelector(`img[data-icon-number='${switcher}']`).classList.add('active-icon');
     iconsPrevTarget = document.querySelector(`img[data-icon-number='${switcher}']`);
     document.querySelector(`img[data-icon-number='${switcher}']`).parentNode.classList.add('active-icon-cover');
     iconsCoverPrevTarget = document.querySelector(`img[data-icon-number='${switcher}']`).parentNode;
-    mainIcon.setAttribute('src', iconsPrevTarget.getAttribute('src'));
 
-    description.innerText = descriptions[switcher];
-    name.innerText = names[switcher];
-    position.innerText = positions[switcher];
+    $('.what-people-say-description, .what-say-person-name, .what-say-person-position, .what-say-person-icon').fadeTo(300, 0.1);
+    setTimeout(() => {
+        mainIcon.setAttribute('src', iconsPrevTarget.getAttribute('src'));
+        description.innerText = descriptions[switcher];
+        name.innerText = names[switcher];
+        position.innerText = positions[switcher];
+    }, 300);
+    $('.what-people-say-description, .what-say-person-name, .what-say-person-position, .what-say-person-icon').fadeTo(300, 1);
 };
 
-const setPreviousIconActive = ()=> {
+const setPreviousIconActive = () => {
     let switcher = iconsPrevTarget.getAttribute('data-icon-number');
     iconsPrevTarget.classList.remove('active-icon');
     iconsPrevTarget.parentNode.classList.remove('active-icon-cover');
-    if(+switcher>0){
+    if (+switcher > 0) {
         switcher--;
-    }else if (+switcher === 0){
-        switcher = icons.length-1;
+    } else if (+switcher === 0) {
+        switcher = icons.length - 1;
     }
     document.querySelector(`img[data-icon-number='${switcher}']`).classList.add('active-icon');
     iconsPrevTarget = document.querySelector(`img[data-icon-number='${switcher}']`);
     document.querySelector(`img[data-icon-number='${switcher}']`).parentNode.classList.add('active-icon-cover');
     iconsCoverPrevTarget = document.querySelector(`img[data-icon-number='${switcher}']`).parentNode;
-    mainIcon.setAttribute('src', iconsPrevTarget.getAttribute('src'));
 
-    description.innerText = descriptions[switcher];
-    name.innerText = names[switcher];
-    position.innerText = positions[switcher];
+    $('.what-people-say-description, .what-say-person-name, .what-say-person-position, .what-say-person-icon').fadeTo(300, 0.1);
+    setTimeout(() => {
+        mainIcon.setAttribute('src', iconsPrevTarget.getAttribute('src'));
+        description.innerText = descriptions[switcher];
+        name.innerText = names[switcher];
+        position.innerText = positions[switcher];
+    }, 300);
+    $('.what-people-say-description, .what-say-person-name, .what-say-person-position, .what-say-person-icon').fadeTo(300, 1);
 };
 
 let nextSlidePlease = setInterval(setNextIconActive, 4000);
@@ -86,18 +92,19 @@ let nextSlidePlease = setInterval(setNextIconActive, 4000);
 const restartInterval = () => {
     clearInterval(nextSlidePlease);
     nextSlidePlease = setInterval(setNextIconActive, 4000);
-}
+};
 
-iconsCover.addEventListener('click', ()=>{
+iconsCover.addEventListener('click', () => {
     changeIconsHandler(event);
     restartInterval();
 });
-nextButton.addEventListener('click', ()=>{
+
+nextButton.addEventListener('click', () => {
     setNextIconActive();
     restartInterval();
 });
-prevButton.addEventListener('click', ()=>{
+
+prevButton.addEventListener('click', () => {
     setPreviousIconActive();
     restartInterval();
 });
-
