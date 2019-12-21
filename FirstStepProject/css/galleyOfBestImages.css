@@ -1,0 +1,20 @@
+.gallery-of-best-images {
+    display: grid;
+    grid-template-columns: 1fr 1160px 1fr;
+    grid-template-rows: 237px auto 209px;
+    grid-template-areas:
+            'lside heading rside'
+            'lside gallery rside'
+            'lside button rside';
+}
+
+.services-title-wrapper {
+    grid-area: heading;
+}
+
+.gallery-of-best-images-button-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: button;
+}

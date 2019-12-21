@@ -8,6 +8,7 @@
 @import "breakingNews.css";
 @import "ourServices.css";
 @import "whatPeopleSay.css";
+@import "galleyOfBestImages.css";
 @import "footer.css";
 
 * {
@@ -55,6 +56,7 @@
     line-height: 20px;
     vertical-align: center;
     transition: background-color 0.3s ease-in;
+    outline: none;
 }
 
 .load-more-button:hover {

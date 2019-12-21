@@ -186,10 +186,8 @@ const loadMoreDelay = () => {
         loadMoreBtn.hidden = false;
         loadingAnimation.hidden = true;
         loadMorePictures();
-    }, 1000);
+    }, 2000);
 };
-
-loadingAnimation.hidden = true;
 
 galleryTabs.addEventListener('click', switchTab);
 loadMoreBtn.addEventListener('click', loadMoreDelay);
