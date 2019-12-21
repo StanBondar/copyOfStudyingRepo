@@ -77,7 +77,8 @@ const loadMorePictures = () => {
     console.log(buttonPressCounter);
     const currentActiveTab = document.querySelector('.amazing-active-tab');
     const category = +currentActiveTab.getAttribute('data-image-category');
-    const categoryLabel = currentActiveTab.innerText;
+    // const categoryLabel = currentActiveTab.innerText;
+    const categoryLabels = ['Graphic Design', 'Web Design', 'Landing Pages', 'Wordpress'];
     let allAddedItems = document.querySelectorAll('.amazing-work-gallery-item-wrapper');
 
     let shownImageAmount = 0;
@@ -119,7 +120,7 @@ const loadMorePictures = () => {
                     </div>
                     <div class="amazing-text-wrapper">
                         <h2 class="amazing-text-title">creative design</h2>
-                        <h2 class="amazing-text-category" data-image-category="${j}">Graphic Design</h2>
+                        <h2 class="amazing-text-category" data-image-category="${j}">${categoryLabels[j]}</h2>
                     </div>
                 </div>
             </div>`;
@@ -159,7 +160,7 @@ const loadMorePictures = () => {
                     </div>
                     <div class="amazing-text-wrapper">
                         <h2 class="amazing-text-title">creative design</h2>
-                        <h2 class="amazing-text-category" data-image-category="${category}">${categoryLabel}</h2>
+                        <h2 class="amazing-text-category" data-image-category="${category}">${categoryLabels[category]}</h2>
                     </div>
                 </div>
             </div>`;
