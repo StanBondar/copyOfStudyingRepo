@@ -1,5 +1,5 @@
-let fields = document.querySelectorAll('input');
-let eyes = document.querySelectorAll('.fas');
+const fields = document.querySelectorAll('input');
+const eyes = document.querySelectorAll('.fas');
 let counter = 0;
 let counter2 = 0;
 
@@ -16,28 +16,33 @@ eyes.forEach(element => {
 eyes.forEach(element => {
 
     element.addEventListener('click', () => {
-        if (element.classList.contains('fa-eye-slash')){
+        if (element.classList.contains('fa-eye-slash')) {
             element.classList.replace('fa-eye-slash', 'fa-eye');
             fields[element.getAttribute('data-eye-number')].setAttribute('type', 'text');
-        }else {
+        } else {
             element.classList.replace('fa-eye', 'fa-eye-slash');
             fields[element.getAttribute('data-eye-number')].setAttribute('type', 'password');
         }
     });
 });
 
-let btn = document.querySelector('.btn');
+const btn = document.querySelector('.btn');
 let secondWrapper = document.querySelector('.second-wrapper');
 let errorMessage = document.createElement('p');
 errorMessage.classList.add('error-message');
 errorMessage.innerText = 'Password is not same';
 
-const checkingData = function(){
+const checkingData = function () {
     event.preventDefault();
-    if(fields[0].value === fields[1].value){
+    if (fields[0].value === fields[1].value) {
         errorMessage.remove();
-        alert('You are welcome');
-    }else{
+        // console.log(errorMessage);
+        if(!document.querySelector('.error-message')){
+            setTimeout(()=>{
+                alert('You are welcome');
+            }, 50);
+        }
+    } else {
         secondWrapper.appendChild(errorMessage);
     }
 };
