@@ -18,7 +18,11 @@ const stopBtn = document.querySelector('.stop');
 let counter = 1;
 
 const changingImages = function () {
-    image.setAttribute('src', `./img/${counter}.jpg`);
+    $('.image-to-show').fadeOut(300);
+    setTimeout(()=>{
+        image.setAttribute('src', `./img/${counter}.jpg`);
+    }, 300);
+    $('.image-to-show').fadeIn(300);
     if (counter === 4) {
         counter = 1;
     } else {
