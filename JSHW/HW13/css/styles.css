@@ -2,9 +2,29 @@
 
 .header {
     text-align: center;
-    padding-top: 32px;
-
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*margin-bottom: 35px;*/
 }
+
+.change-theme {
+    margin-left: 30px;
+    position: fixed;
+    top: 30px;
+    right: 10px;
+    border-radius: 5px;
+    color: black;
+    padding: 5px;
+}
+
+.to-light {
+    background-color: black;
+    border: 1px solid white;
+    color: white;
+}
+
 .links {
     margin-right: 70px;
     color: #16a085;
@@ -15,7 +35,7 @@
 }
 
 .wallpaper {
-    padding-top: 35px;
+    /*margin-top: 35px;*/
     width: 100%;
 }
 
@@ -63,4 +83,9 @@
     font-size: 16px;
     font-family: sans-serif;
     font-weight: bold;
+}
+
+.dark {
+    background-color: black;
+    color: white;
 }
