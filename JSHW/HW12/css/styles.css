@@ -1,0 +1,15 @@
+.image-to-show {
+    width: 400px;
+    height: 400px;
+    animation: fadeIn ease 0.5s;
+}
+
+.images-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inactive {
+    display: none;
+}
