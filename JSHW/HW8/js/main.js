@@ -61,18 +61,28 @@ function fieldOnBlur() {
         field.classList.add('field-inactive');
         if(field.value.trim().length>0) {
             let value = field.value;
-            let priceWrapper = document.createElement('span');
-            priceWrapper.innerText = `Current price: ${value}`;
-            priceWrapper.classList.add('price-wrapper');
             let deleteButton = document.createElement('span');
             deleteButton.classList.add('delete');
             deleteButton.innerText = `X`;
-            form.prepend(priceWrapper);
-            priceWrapper.appendChild(deleteButton);
-            deleteButton.addEventListener('click', ()=>{
-                priceWrapper.remove();
-                field.value = '';
-            });
+            if (!document.querySelector('.price-wrapper')) {
+                let priceWrapper = document.createElement('span');
+                priceWrapper.innerText = `Current price: ${value}`;
+                priceWrapper.classList.add('price-wrapper');
+                priceWrapper.appendChild(deleteButton);
+                form.prepend(priceWrapper);
+                deleteButton.addEventListener('click', () => {
+                    priceWrapper.remove();
+                    field.value = '';
+                });
+            }else {
+                let priceWrapper = document.querySelector('.price-wrapper');
+                priceWrapper.innerText = `Current price: ${value}`;
+                priceWrapper.appendChild(deleteButton);
+                deleteButton.addEventListener('click', () => {
+                    priceWrapper.remove();
+                    field.value = '';
+                });
+            }
         }
     }
 }
