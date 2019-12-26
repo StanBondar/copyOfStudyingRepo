@@ -27,8 +27,8 @@ eyes.forEach(element => {
 });
 
 const btn = document.querySelector('.btn');
-let secondWrapper = document.querySelector('.second-wrapper');
-let errorMessage = document.createElement('p');
+const secondWrapper = document.querySelector('.second-wrapper');
+const errorMessage = document.createElement('p');
 errorMessage.classList.add('error-message');
 errorMessage.innerText = 'Password is not same';
 

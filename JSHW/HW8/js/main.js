@@ -32,6 +32,7 @@ wrapper.appendChild(span);
 let form = document.createElement('form');
 form.classList.add('form');
 wrapper.appendChild(form);
+
 let field = document.createElement('input');
 field.setAttribute('type', 'text');
 field.setAttribute('placeholder', 'Enter price...');
@@ -49,21 +50,24 @@ function fieldOnFocus() {
 }
 
 function fieldOnBlur() {
-    if(+field.value<0||Number.isNaN(+field.value)){
+    if (+field.value < 0 || Number.isNaN(+field.value)) {
         field.classList.remove('field-active');
         field.classList.add('field-error');
         errorMessage.classList.add('error-message');
         errorMessage.innerText = `Please enter correct price`;
         form.appendChild(errorMessage);
-    }else {
+
+    } else {
         field.classList.remove('field-error');
         field.classList.remove('field-active');
         field.classList.add('field-inactive');
-        if(field.value.trim().length>0) {
+
+        if (field.value.trim().length > 0) {
             let value = field.value;
             let deleteButton = document.createElement('span');
             deleteButton.classList.add('delete');
             deleteButton.innerText = `X`;
+
             if (!document.querySelector('.price-wrapper')) {
                 let priceWrapper = document.createElement('span');
                 priceWrapper.innerText = `Current price: ${value}`;
@@ -74,7 +78,8 @@ function fieldOnBlur() {
                     priceWrapper.remove();
                     field.value = '';
                 });
-            }else {
+
+            } else {
                 let priceWrapper = document.querySelector('.price-wrapper');
                 priceWrapper.innerText = `Current price: ${value}`;
                 priceWrapper.appendChild(deleteButton);
