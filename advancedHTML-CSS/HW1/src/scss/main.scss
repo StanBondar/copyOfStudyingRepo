@@ -1,0 +1,17 @@
+@import './fontAwesome/fontawesome.scss';
+@import './fontAwesome/brands.scss';
+@import './fontAwesome/regular.scss';
+@import './fontAwesome/solid.scss';
+@import './fontAwesome/v4-shims.scss';
+
+$bgcolor1 : #373c3f;
+$bgcolor2 : #acd8ad;
+$fontColor1: #ffffff;
+$fontColor2: #3f4043;
+
+
+.container {
+    width: 100vw;
+}
+
+@import './components/header.scss';
