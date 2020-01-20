@@ -9,10 +9,15 @@ $bgcolor2 : #acd8ad;
 $fontColor1: #ffffff;
 $fontColor2: #3f4043;
 
+* {
+    box-sizing: border-box;
+}
 
 .container {
     width: 100vw;
+    min-width: 320px;
 }
 
 @import './components/header.scss';
 @import './components/mainBackgroundSection.scss';
+@import './components/menuSections.scss';

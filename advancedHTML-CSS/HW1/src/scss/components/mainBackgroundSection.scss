@@ -1,6 +1,6 @@
 .main-background {
-    width: 100%;
-    height: 173px;
+    width: 100vw;
+    height: 54vw;
     background-image: url('../img/pizza.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-bottom: 4px;
 
     .main-text {
         margin-left: 20px;
@@ -33,13 +34,13 @@
         font-size: 14px;
         font-family: 'Lato', sans-serif, system-ui;
         font-weight: 700;
-        // margin-top: 11px;
     }
 }
 
 @media (min-width: 640px){
     .main-background {
-        height: 346px;
+        // height: 346px;
+        margin-bottom: 5px;
 
         .main-text {
             margin-left: 38px;
@@ -59,7 +60,8 @@
 
 @media (min-width: 980px){
     .main-background {
-        height: 530px;
+        // height: 530px;
+        margin-bottom: 6px;
 
         .main-text {
             margin-left: 30px;
@@ -79,7 +81,7 @@
 
 @media (min-width: 1200px){
     .main-background {
-        height: 649px;
+        // height: 649px;
 
         .main-text {
             margin-left: 37px;
