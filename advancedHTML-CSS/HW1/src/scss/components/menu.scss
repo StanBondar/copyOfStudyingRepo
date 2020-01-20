@@ -1,0 +1,178 @@
+.menu {
+    font-family: 'Lato', sans-serif, system-ui;
+    margin-bottom: 48px;
+
+    .menu-title-cover {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 60px;
+
+        .menu-heading-wrapper {
+            // display: flex;
+            // flex-direction: column;
+            // align-items: flex-end;
+
+            .menu-heading {
+                text-transform: uppercase;
+                color: $fontColor2;
+                font-size: 20px;
+                font-weight: 400;
+                margin: 0 0 5px 0;
+            }
+
+            .menu-description {
+                display: block;
+                font-size: 11px;
+                color: #cbccce;
+            }
+        }
+
+        img {
+            display: none;
+        }
+    }
+
+    .menu-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 29px;
+
+        .menu-section-title {
+            height: 37px;
+            width: 100%;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+            .section-title {
+                font-size: 20px;
+                font-weight: 400;
+                margin: 0;
+                margin-left: 18px;
+            }
+        }
+
+        .dark-section {
+            background-color: $bgcolor3;
+            color: $bgcolor2;
+        }
+
+        .light-section {
+            background-color: $bgcolor2;
+            color: $fontColor1;
+        }
+
+        .menu-positions-wrapper {
+            width: 93%;
+
+            .menu-subcategory {
+
+                .subcategory-title {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .menu-subcategory-title {
+                        text-transform: uppercase;
+                        font-size: 15px;
+                        font-weight: 400;
+                        color: $fontColor2;
+                    }
+
+                    i {
+                        font-size: 25px;
+                        color: $bgcolor2;
+                    }
+                }
+
+                .menu-item {
+                    margin-bottom: 11px;
+
+                    .menu-item-inner-wrapper {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        color: $bgcolor3;
+                        font-size: 15px;
+                        font-weight: 400;
+                        margin-bottom: 8px;
+                    }
+
+                    .menu-item-description {
+                        margin: 0;
+                        font-size: 10px;
+                        font-weight: 400;
+                        color: $bgcolor3;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (min-width: 640px) {
+    //
+    .menu {
+        margin-bottom: 117px;
+
+        .menu-title-cover {
+            height: 120px;
+            
+            .menu-heading-wrapper {
+                .menu-heading {
+                    font-size: 38px;
+                }
+
+                .menu-description {
+                    font-size: 19px;
+                }
+            }
+        }
+
+        .menu-section {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (min-width: 980px) {
+    //
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 84px;
+
+        .menu-title-cover {
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            height: 115px;
+
+            .menu-heading-wrapper {
+                margin-left: 22px;
+            }
+
+            img {
+                display: inline;
+                margin-right: 12px;
+            }
+        }
+
+        .menu-section {
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    //
+    .menu {
+        margin-bottom: 128px;
+
+    }
+}

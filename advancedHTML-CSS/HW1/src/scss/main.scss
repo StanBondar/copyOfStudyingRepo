@@ -6,6 +6,7 @@
 
 $bgcolor1 : #373c3f;
 $bgcolor2 : #acd8ad;
+$bgcolor3 : #3f4043;
 $fontColor1: #ffffff;
 $fontColor2: #3f4043;
 
@@ -21,5 +22,5 @@ $fontColor2: #3f4043;
 @import './components/header.scss';
 @import './components/mainBackgroundSection.scss';
 @import './components/menuSections.scss';
-
+@import './components/menu.scss';
 @import './components/footer.scss';
