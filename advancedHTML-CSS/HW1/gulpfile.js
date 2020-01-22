@@ -26,9 +26,9 @@ const cleanFolder = () => {
 
 const buildJs = () => {
     return gulp.src('./src/js/*.js')
-        .pipe(concat('main.js'))
-        .pipe(uglify())
-        .pipe(minify())
+        // .pipe(concat('main.js'))
+        // .pipe(uglify())
+        // .pipe(minify())
         .pipe(gulp.dest('./dist/js/'));
 }
 

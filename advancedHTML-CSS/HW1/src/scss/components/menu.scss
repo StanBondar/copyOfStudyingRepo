@@ -19,12 +19,14 @@
                 color: $fontColor2;
                 font-size: 20px;
                 font-weight: 400;
-                margin: 0 0 5px 0;
+                line-height: 6px;
+                margin: 17px 0 8px 0px;
             }
 
             .menu-description {
                 display: block;
-                font-size: 11px;
+                padding: 4px 0 0 2px;
+                font-size: 10px;
                 color: #cbccce;
             }
         }
@@ -47,12 +49,14 @@
             text-transform: uppercase;
             display: flex;
             align-items: center;
+            justify-content: center;
 
             .section-title {
+                width: 89%;
                 font-size: 20px;
                 font-weight: 400;
                 margin: 0;
-                margin-left: 18px;
+                // padding-left: 18px;
             }
         }
 
@@ -67,7 +71,7 @@
         }
 
         .menu-positions-wrapper {
-            width: 93%;
+            width: 89%;
 
             .menu-subcategory {
 
@@ -81,6 +85,7 @@
                         font-size: 15px;
                         font-weight: 400;
                         color: $fontColor2;
+                        line-height: 21px;
                     }
 
                     i {
@@ -97,14 +102,14 @@
                         justify-content: space-between;
                         align-items: center;
                         color: $bgcolor3;
-                        font-size: 15px;
+                        font-size: 13.3px;
                         font-weight: 400;
                         margin-bottom: 8px;
                     }
 
                     .menu-item-description {
                         margin: 0;
-                        font-size: 10px;
+                        font-size: 9px;
                         font-weight: 400;
                         color: $bgcolor3;
                     }
@@ -115,14 +120,116 @@
 
 }
 
+@media (max-width: 630px) {
+
+    .nec-fermentum-shift-down {
+        margin-top: -9px;
+        margin-left: -1px;
+    }
+
+    .nec-description-shift-down {
+        margin-top: -4px !important;
+    }
+
+    .id-dolor-shift-up {
+        margin-top: 7px;
+        margin-bottom: 16px;
+    }
+
+    .one-more-Nec-Shift {
+        margin-top: -3px;
+    }
+
+    .one-more-nec-descr {
+        margin-top: -2px !important;
+    }
+
+    .second-section-shift-up {
+        margin-top: -10px;
+    }
+
+    .lass-shift-donw {
+        margin-top: 2px;
+    }
+
+    .lass-descr-shift {
+        margin-top: -2px !important;
+    }
+
+    .third-nec-shift {
+        margin-top: -1px !important;
+    }
+
+    .third-nec-decr-shift {
+        margin-top: -2px !important;
+    }
+
+    .eu-third-shift {
+        margin-top: -3px !important;
+    }
+
+    .eu-descr-third-shift {
+        margin-top: -2px !important;
+    }
+
+    .non-third-shift {
+        margin-top: -2px !important;
+    }
+
+    .pharetra-fourth-shift {
+        margin-top: 7px !important;
+    }
+
+    .lass-fourth-shift {
+        margin-top: 2px !important;
+    }
+
+    .lass-descr-fourth-shift {
+        margin-top: -2px !important;
+    }
+
+    .nec-last-shift {
+        margin-top: -2px !important;
+    }
+
+    .footer {
+        margin-top: -11px;
+
+        .summary {
+            line-height: 18px;
+        }
+    }
+
+    .cookie-shift {
+        margin-top: -4px;
+    }
+
+    .wine-shift {
+        margin: -7px 5px 0 0;
+    }
+
+    .coffee-shift {
+        margin-top: -4px;
+        margin-right: -2px;
+        font-size: 23px !important;
+    }
+
+    .beer-shift {
+        font-size: 24px !important;
+        margin: -12px 4px 0 0
+    }
+
+}
+
 @media (min-width: 640px) {
+
     //
     .menu {
         margin-bottom: 117px;
 
         .menu-title-cover {
             height: 120px;
-            
+
             .menu-heading-wrapper {
                 .menu-heading {
                     font-size: 38px;
@@ -136,12 +243,44 @@
 
         .menu-section {
             margin-bottom: 40px;
+
+            .menu-section-title {
+                height: 75px;
+
+                .section-title {
+                    font-size: 41px;
+                    // padding-left: 37px;
+                }
+            }
+
+            .menu-positions-wrapper {
+                .menu-subcategory {
+                    .subcategory-title {
+                        .menu-subcategory-title {
+                            font-size: 31px;
+                        }
+
+                        i {
+                            font-size: 35px;
+                        }
+                    }
+
+                    .menu-item {
+                        .menu-item-inner-wrapper {
+                            font-size: 27px;
+                        }
+
+                        .menu-item-description {
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
 @media (min-width: 980px) {
-    //
     .menu {
         display: flex;
         flex-wrap: wrap;
@@ -155,6 +294,14 @@
 
             .menu-heading-wrapper {
                 margin-left: 22px;
+
+                .menu-heading {
+                    font-size: 34px;
+                }
+
+                .menu-description {
+                    font-size: 20px;
+                }
             }
 
             img {
@@ -165,12 +312,19 @@
 
         .menu-section {
             width: 50%;
+
+            .menu-section-title {
+
+
+                .section-title {
+                    font-size: 35px;
+                }
+            }
         }
     }
 }
 
 @media (min-width: 1200px) {
-    //
     .menu {
         margin-bottom: 128px;
 

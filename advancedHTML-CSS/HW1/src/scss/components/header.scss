@@ -10,9 +10,10 @@
 
     h2 {
         text-transform: capitalize;
-        font-size: 12px;
+        font-size: 14px;
         color: $fontColor1;
-        margin-left: 19px;
+        margin-left: 18px;
+        padding-bottom: 1px;
     }
 
     nav {
@@ -49,6 +50,10 @@
 
     }
 
+    .menu-hidden {
+        visibility: hidden;
+    }
+
     .menu-btn {
         border-color: #202529;
         width: 41px;
@@ -58,21 +63,21 @@
         justify-content: center;
         background-color: #202529;
         margin-left: auto;
-        font-size: 16px;
+        font-size: 15px;
 
-        .fa-times {
-            display: none;
-        }
+        // .fa-times {
+        //     display: none;
+        // }
 
-        &:hover {
-            .fa-bars {
-                display: none;
-            }
+        // &:hover {
+        //     .fa-bars {
+        //         display: none;
+        //     }
 
-            .fa-times {
-                display: inherit;
-            }
-        }
+        //     .fa-times {
+        //         display: inherit;
+        //     }
+        // }
     }
 
     img {
@@ -81,8 +86,8 @@
 
 }
 
-.menu-hidden {
-    visibility: hidden;
+.active-menu-btn {
+    display: none;
 }
 
 .fa {
@@ -133,7 +138,7 @@
             justify-content: space-between;
             margin-left: 30px;
 
-            a{
+            a {
                 color: #ebebeb;
                 font-size: 15px;
                 text-transform: uppercase;
@@ -162,7 +167,7 @@
     }
 }
 
-@media (min-width: 1200px){
+@media (min-width: 1200px) {
     .row {
         nav {
             margin-left: 37px;

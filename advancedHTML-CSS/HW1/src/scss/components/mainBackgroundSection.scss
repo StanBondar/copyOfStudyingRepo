@@ -37,6 +37,16 @@
     }
 }
 
+@media (max-width: 630px) {
+    .main-title-shift{
+    margin-top: 14px;
+        margin-bottom: 7px;
+        line-height: 22px;
+}
+}
+
+
+
 @media (min-width: 640px){
     .main-background {
         // height: 346px;
