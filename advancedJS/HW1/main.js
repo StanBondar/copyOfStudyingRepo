@@ -2,6 +2,8 @@ function HamburgerException(message) {
     this.message = message;
 }
 
+Hamburger.prototype = Object.create(Error.prototype);
+
 
 function Hamburger(size, stuffing) {
     try {
