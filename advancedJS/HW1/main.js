@@ -2,7 +2,8 @@ function HamburgerException(message) {
     this.message = message;
 }
 
-Hamburger.prototype = Object.create(Error.prototype);
+HamburgerException.prototype = Object.create(Error.prototype);
+// HamburgerException.__proto__ = Error.prototype;
 
 
 function Hamburger(size, stuffing) {
@@ -18,8 +19,10 @@ function Hamburger(size, stuffing) {
         this._toppings = [];
 
     } catch (e) {
-        console.log(this + ' ' + e.message);
+        console.error(e.message);
     }
+
+
 }
 
 Hamburger.prototype.addTopping = function (topping) {
@@ -32,18 +35,18 @@ Hamburger.prototype.addTopping = function (topping) {
         }
         this._toppings.push(topping);
     } catch (e) {
-        console.log(e.message);
+        console.error(e.message);
     }
 }
 
-Hamburger.prototype.getTopping = function () {
+Hamburger.prototype.getToppings = function () {
     try {
         if (this._toppings.length > 0) {
             return this._toppings;
         }
         throw new HamburgerException('No topping added. Try to add at least on.')
     } catch (e) {
-        console.log(e.message);
+        console.error(e.message);
     }
 
 }
@@ -56,7 +59,7 @@ Hamburger.prototype.removeTopping = function (topping) {
         }
         throw new HamburgerException('No such topping in burger or incorrect topping. Try again');
     } catch (e) {
-        console.log(e.message);
+        console.error(e.message);
     }
 }
 
@@ -132,9 +135,9 @@ Hamburger.TOPPING_SPICE = {
 };
 
 var h1 = new Hamburger(Hamburger.SIZE_LARGE, Hamburger.STUFFING_CHEESE);
-// var h2 = new Hamburger();
+var h2 = new Hamburger();
 
-h1.getTopping();
+h1.getToppings();
 
 h1.addTopping(Hamburger.TOPPING_MAYO);
 h1.addTopping(Hamburger.TOPPING_SPICE);
