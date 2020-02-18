@@ -7,7 +7,6 @@ HamburgerException.prototype = Object.create(Error.prototype);
 
 
 function Hamburger(size, stuffing) {
-    try {
         if (!size || size.type !== 'size') {
             throw new HamburgerException('Incorrect size of hamburger or no size given');
         }
@@ -17,11 +16,6 @@ function Hamburger(size, stuffing) {
         this._size = size;
         this._stuffing = stuffing;
         this._toppings = [];
-
-    } catch (e) {
-        console.error(e.message);
-    }
-
 
 }
 
@@ -133,8 +127,12 @@ Hamburger.TOPPING_SPICE = {
     calories: 0,
     type: 'topping'
 };
-
-var h1 = new Hamburger(Hamburger.SIZE_LARGE, Hamburger.STUFFING_CHEESE);
+try{
+    var h1 = new Hamburger(Hamburger.SIZE_LARGE, Hamburger.STUFFING_CHEESE);
+    var h2 = new Hamburger();
+}catch(e){
+    console.log(e.message);
+}
 var h2 = new Hamburger();
 
 h1.getToppings();
