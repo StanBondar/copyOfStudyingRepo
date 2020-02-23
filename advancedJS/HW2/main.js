@@ -95,7 +95,7 @@ class Hamburger {
     removeTopping(topping) {
         try {
             if (topping.type === "topping" && this._toppings.includes(topping)) {
-                var index = this._toppings.indexOf(topping);
+                const index = this._toppings.indexOf(topping);
                 this._toppings.splice(index, 1);
             }
             throw new HamburgerException('No such topping in burger or incorrect topping. Try again');
@@ -104,7 +104,7 @@ class Hamburger {
         }
     }
 
-    getStize() {
+    getSize() {
         return this._size;
     }
 
@@ -113,7 +113,7 @@ class Hamburger {
     }
 
     calculatePrice() {
-        var totalPrice = this._size.price + this._stuffing.price;
+        const totalPrice = this._size.price + this._stuffing.price;
         if (this._toppings.length > 0) {
             totalPrice += this._toppings.reduce((total, num) => {
                 return total + num.price;
@@ -123,7 +123,7 @@ class Hamburger {
     }
 
     calculateCalories() {
-        var totalCalories = this._size.calories + this._stuffing.calories;
+        const totalCalories = this._size.calories + this._stuffing.calories;
         if (this._toppings.length > 0) {
             totalCalories += this._toppings.reduce((total, num) => {
                 return total + num.calories;
@@ -134,8 +134,8 @@ class Hamburger {
 
 }
 
-var h1 = new Hamburger(Hamburger.SIZE_LARGE, Hamburger.STUFFING_CHEESE);
-var h2 = new Hamburger();
+const h1 = new Hamburger(Hamburger.SIZE_LARGE, Hamburger.STUFFING_CHEESE);
+const h2 = new Hamburger();
 
 h1.getToppings();
 
