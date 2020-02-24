@@ -1,7 +1,8 @@
 import Card from './card.js';
 
-class Column {
-    constructor(parent, index){
+export default class Column {
+    constructor(name ,parent, index){
+        this.name = name;
         this.parent = parent;
         this.cardIndex = index;
         this.cards = [];
@@ -24,12 +25,21 @@ class Column {
         this.cardsCover = document.createElement('div');
         this.cardsCover.classList.add('cards-cover');
 
+        this.columnHeader = document.createElement('div');
+        this.columnHeader.classList.add('column-header');
+        this.columnTitle = document.createElement('p');
+        this.columnTitle.classList.add('column-title');
+        this.columnTitle.setAttribute('contenteditable', 'true');
+        this.columnTitle.innerText = this.name;
+        
         this.sortBtn = document.createElement('button');
-        this.sortBtn.innerHTML = 'A-z';
+        this.sortBtn.innerText = 'A-z';
         this.sortBtn.classList.add('sort-btn');
+
+        this.columnHeader.append(this.columnTitle, this.sortBtn);
         
 
-        this.column.append(this.sortBtn, this.cardsCover, this.createNewCardBtn);
+        this.column.append(this.columnHeader, this.cardsCover, this.createNewCardBtn);
         parent.prepend(this.column);
     }
 
@@ -53,6 +63,3 @@ class Column {
         })
     }
 }
-
-
-window.col = new Column(document.body, 1);

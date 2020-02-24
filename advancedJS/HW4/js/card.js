@@ -12,7 +12,6 @@ export default class Card {
         this.card.setAttribute('data-index', this.index);
         this.card.setAttribute('draggable', 'true');
         this.card.classList.add('card');
-        // this.cardContent = document.createElement('textarea');
         this.cardContent = document.createElement('p');
         this.cardContent.classList.add('cardContent');
         this.cardContent.innerText = ' ';
