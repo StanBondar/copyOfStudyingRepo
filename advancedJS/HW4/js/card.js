@@ -64,13 +64,13 @@ export default class Card {
         this.card.addEventListener('dragstart', function () {
             console.log(this);
             dragStart(event);
-        }.bind(this))
+        }.bind(this));
         this.card.addEventListener('dragover', function () {
             dragOver(event);
-        }.bind(this))
+        }.bind(this));
         this.card.addEventListener('dragend', function () {
             console.log(this);
             dragEnd();
-        }.bind(this))
+        }.bind(this));
     }
 }
