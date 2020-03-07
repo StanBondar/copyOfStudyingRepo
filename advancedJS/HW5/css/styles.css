@@ -6,7 +6,8 @@ body {
 
 .main-container{
     width: 100%;
-    min-height: fit-content;
+    height: fit-content;
+    min-height: 100vh;
     background-color: darkgrey;
     display: flex;
     flex-direction: column;
