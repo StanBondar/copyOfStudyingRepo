@@ -8,9 +8,7 @@ xhr.send();
 
 xhr.addEventListener('load', function requestHandler () {
     renderTarget.innerHTML = '';
-    // console.log(xhr.response);
     for(let element in xhr.response.results){
-        // console.log(xhr.response.results[element]['characters']);
         const episode = new Episode(xhr.response.results[element], renderTarget);
         console.log(episode._characters);
     }

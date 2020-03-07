@@ -46,8 +46,6 @@ export default class Episode {
 
             characterRequest.addEventListener('load', () => {
                 this._characters.push(characterRequest.response['name']);
-                // target.insertAdjacentHTML('beforeend', `<li>${characterRequest.response['name']}</li>`);
-                // console.log('Characters length' ,this._characters.length);
                 if (this._characters.length === this._charactersLinks.length) {
                     console.log(`All characters of ${this._title} - `, this._characters);
                     target.innerHTML = '';
@@ -56,10 +54,6 @@ export default class Episode {
                     })
                 }
             });
-            // console.log('Links length' ,this._charactersLinks.length);
-
-
-            // characterRequest.addEventListener('progress', ()=>{
         });
     }
 }
