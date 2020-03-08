@@ -1,0 +1,8 @@
+@import './loader.css';
+@import './header.css';
+@import './body.css';
+@import './post.css';
+
+*{
+    box-sizing: border-box;
+}

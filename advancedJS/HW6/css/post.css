@@ -1,0 +1,17 @@
+.card-item {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.inactive {
+    display: none;
+}
+
+input.card-title{
+    display: block;
+    width: 100%;
+}
+
+input.card-text{
+    width: 100%;
+}
