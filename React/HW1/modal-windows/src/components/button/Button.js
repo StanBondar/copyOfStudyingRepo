@@ -1,12 +1,13 @@
 import React from 'react';
+import '../styles/buttons.scss';
 
 class Button extends React.Component{
     render(){
-        const {text} = this.props;
+        const {text, action, style} = this.props;
         
         return(
             <>
-            <button>{text}</button>
+            <button className={style} onClick={action}>{text}</button>
             </>
         )
     }
