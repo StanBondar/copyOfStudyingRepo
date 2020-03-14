@@ -1,7 +1,7 @@
 import React from 'react';
 import withStyles from 'react-jss';
 import '../styles/modal.scss';
-
+import PropTypes from "prop-types";
 
 class Modal extends React.Component {
     render() {
@@ -24,5 +24,14 @@ class Modal extends React.Component {
     }
 }
 
+Modal.PropTypes = {
+    header: PropTypes.string.required,
+    closeButton: PropTypes.bool,
+    text: PropTypes.string.required,
+    changeVisibility: PropTypes.func.required,
+    modalBodyStyle: PropTypes.string,
+    modalHeaderStyle: PropTypes.string,
+    button: PropTypes.array
+}
 
 export default Modal;
