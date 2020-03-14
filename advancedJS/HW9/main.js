@@ -1,5 +1,5 @@
 const btn = document.querySelector('#contactUs');
-let state = true;
+let newUserIndicator = true;
 
 function eventHandler(){
     document.cookie = 'experiment = novalue; max-age=6'
@@ -11,9 +11,9 @@ function eventHandler(){
         }
     })
     if(!newUserCookie){
-        document.cookie = `new-user=${state}`;
+        document.cookie = `new-user=${newUserIndicator}`;
     }else{
-        document.cookie = `new-user=${!state}`;
+        document.cookie = `new-user=${!newUserIndicator}`;
     }
 }
 
