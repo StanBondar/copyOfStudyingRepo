@@ -34,29 +34,33 @@ class App extends React.Component {
   }
 
   toggleFirstModalVisibility = (e) => {
-    if (e.target.classList.contains('firstButton') || e.target.classList.contains('modalBackground')) {
+    if (e.target.classList.contains('firstButton') || e.target.classList.contains('modalBackground') || e.target.classList.contains('closeButton')) {
       this.setState({ firstModal: { ...this.state.firstModal, unvisible: !this.state.firstModal.unvisible } })
     }
   }
 
   toggleSecondModalVisibility = (e) => {
-    if (e.target.classList.contains('secondButton') || e.target.classList.contains('modalBackground')) {
+    if (e.target.classList.contains('secondButton') || e.target.classList.contains('modalBackground') || e.target.classList.contains('closeButton')) {
       this.setState({ secondModal: { ...this.state.secondModal, unvisible: !this.state.secondModal.unvisible } })
     }
   }
 
   render() {
     const { firstButton, secondButton, firstModal, secondModal } = this.state;
+    const modalButtonBundle = [
+      (<Button key='1' style="firstModalBtn" text='Ok' action={this.toggleFirstModalVisibility.bind(this)} />),
+      (<Button key='2' style='firstModalBtn' text="Cancel" action={this.toggleSecondModalVisibility.bind(this)} />)
+    ];
     const modalElements = {
-      firstModalElement: (<Modal modalHeaderStyle={firstModal.headerClassName} modalBodyStyle={firstModal.bodyClassName} header={firstModal.header} closeButton={firstModal.closeButton} text={firstModal.text} changeVisibility={this.toggleFirstModalVisibility.bind(this)} />),
-      secondModalElement: (<Modal modalHeaderStyle={secondModal.headerClassName} modalBodyStyle={secondModal.bodyClassName} header={secondModal.header} closeButton={secondModal.closeButton} text={secondModal.text} changeVisibility={this.toggleSecondModalVisibility.bind(this)} />)
+      firstModalElement: (<Modal buttons={modalButtonBundle} modalHeaderStyle={firstModal.headerClassName} modalBodyStyle={firstModal.bodyClassName} header={firstModal.header} closeButton={firstModal.closeButton} text={firstModal.text} changeVisibility={this.toggleFirstModalVisibility.bind(this)} />),
+      secondModalElement: (<Modal buttons={modalButtonBundle} modalHeaderStyle={secondModal.headerClassName} modalBodyStyle={secondModal.bodyClassName} header={secondModal.header} closeButton={secondModal.closeButton} text={secondModal.text} changeVisibility={this.toggleSecondModalVisibility.bind(this)} />)
     }
 
     return (
       <div className="App">
         <div className="mainContainer">
           <Button style={firstButton.style} text={firstButton.text} action={this.toggleFirstModalVisibility.bind(this)} />
-          <Button style={secondButton.style} text={secondButton.text} action={this.toggleSecondModalVisibility} />
+          <Button style={secondButton.style} text={secondButton.text} action={this.toggleSecondModalVisibility.bind(this)} />
           {firstModal.unvisible && modalElements.firstModalElement}
           {secondModal.unvisible && modalElements.secondModalElement}
         </div>

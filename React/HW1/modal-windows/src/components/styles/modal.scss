@@ -16,6 +16,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .firstModalHeader {
@@ -35,6 +36,9 @@
     color: white;
     padding: 10px;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .firstModalBody {
@@ -46,3 +50,9 @@
     @include modalBody;
     background-color: green;
 }
+
+.closeButton {
+    font-size: 32px;
+    cursor: pointer;
+}
+

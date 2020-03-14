@@ -1,15 +1,30 @@
-.firstButton {
+@mixin button {
     width: 150px;
     height: 50px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.firstButton {
+    @include button;
     background-color: red;
 }
 
 .secondButton {
-    width: 150px;
-    height: 50px;
-    border: none;
-    border-radius: 5px;
+    @include button;
     background-color: green;   
+}
+
+.modal-buttons-container {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.firstModalBtn {
+    @include button;
+    color: white;
+    background-color: darkred;
 }
