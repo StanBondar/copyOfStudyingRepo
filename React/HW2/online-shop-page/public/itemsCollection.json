@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Eco lunch-box",
+        "price": 299,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/7/5/750bca202674bc8d25da12168174f6e1.jpg",
+        "vendorCode": 649735,
+        "color": "Green",
+        "id": 0
+    },
+    {
+        "name": "Eco plate",
+        "price": 49,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/c/e/ce4e11e11457b061a39c4bc6e63995a3.jpg",
+        "vendorCode": 648016,
+        "color": "Blue",
+        "id": 1
+    },
+    {
+        "name": "Eco bamboo toothbrush",
+        "price": 59,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/7/c/7c19f5bc5f9aeea3f45b70cd6352a5ec.JPG",
+        "vendorCode": 648394,
+        "color": "Brown",
+        "id": 2
+    },
+    {
+        "name": "Eco Cup",
+        "price": 59,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/c/4/c46b457092a57a69401d2681921841a0.JPG",
+        "vendorCode": 646943,
+        "color": "Green",
+        "id": 3
+    },
+    {
+        "name": "Eco stainless still straw",
+        "price": 179,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/a/3/a326fc2591f60a8e829da617a130b633.jpg",
+        "vendorCode": 646945,
+        "color": "Silver",
+        "id": 4
+    },
+    {
+        "name": "Eco bamboo straw",
+        "price": 199,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/8/d/8de20cb5cbd4533eaec9922144932493.JPG",
+        "vendorCode": "646949",
+        "color": "Bamboo",
+        "id": 5
+    },
+    {
+        "name": "Eco glass straw",
+        "price": 199,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/4/7/4774dea2f87b8f72b72f8d0105776144.jpg",
+        "vendorCode": 646950,
+        "color": "Violet",
+        "id": 6
+    },
+    {
+        "name": "Eco silicon cup",
+        "price": 269,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/7/6/76da22b82083b594b3dd584df66939f0.jpg",
+        "vendorCode": 648744,
+        "color": "Pink",
+        "id": 7
+    },
+    {
+        "name": "Eco ceramic cup",
+        "price": 299,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/a/c/acb96e8318dbf8d8503644a7e838b17f.JPG",
+        "vendorCode": 648740,
+        "color": "Blue",
+        "id": 8
+    },
+    {
+        "name": "Eco big lunch-box",
+        "price": 349,
+        "imageURL": "https://i.citrus.ua/imgcache/size_800/uploads/shop/0/8/08bb2d3c194188ac73ac636ca192ad1b.jpg",
+        "vendorCode": 659203,
+        "color": "Pink",
+        "id": 9
+    }
+]
