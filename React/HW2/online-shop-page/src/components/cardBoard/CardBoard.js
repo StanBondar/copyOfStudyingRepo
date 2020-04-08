@@ -26,7 +26,6 @@ class CardBoard extends Component {
     return (
       <div className="card-board">
         {cardsBundle}
-        {}
       </div>
     );
   }

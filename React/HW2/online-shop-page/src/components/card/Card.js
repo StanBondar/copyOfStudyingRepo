@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 import Button from "../button/Button";
-// import Button from '../button/Button';
 import "./Cards.scss";
 
 class Card extends Component {
@@ -35,14 +34,12 @@ class Card extends Component {
 
     function addToFavourites() {
       changeStar.call(this);
-      //   debugger;
       let favourite = [];
       let includesIndicator = false;
       if (localStorage.getItem("favourite")) {
         favourite = [...JSON.parse(localStorage.getItem("favourite"))];
 
         favourite.forEach(element => {
-          // debugger;
           if (element.vendorCode === items[id].vendorCode) {
             favourite.splice(element, 1);
             includesIndicator = true;
@@ -66,18 +63,8 @@ class Card extends Component {
       if (localStorage.getItem("inCart")) {
         inCart = [...JSON.parse(localStorage.getItem("inCart"))];
 
-        // inCart.forEach(element => {
-        //   if (element.vendorCode === items[id].vendorCode) {
-        //     // inCart.splice(element, 1);
-        //     includesIndicator = true;
-        //     element.inCartQuantity += 1;
-        //     localStorage.setItem("inCart", JSON.stringify(inCart));
-        //   }
-        // });
-
         for (const element of inCart) {
           if (element.vendorCode === items[id].vendorCode) {
-            // inCart.splice(element, 1);
             includesIndicator = true;
             element.inCartQuantity += 1;
             localStorage.setItem("inCart", JSON.stringify(inCart));
@@ -107,7 +94,11 @@ class Card extends Component {
             icon={stars[+starFlag]}
             onClick={addToFavourites.bind(this)}
           />
-          <Button text="Buy now" style="secondButton" action={addToCart} />
+          <Button 
+            text="Buy now" 
+            style="secondButton" 
+            action={addToCart} 
+          />
         </div>
       </section>
     );

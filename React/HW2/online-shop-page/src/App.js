@@ -34,8 +34,6 @@ class App extends React.Component {
 
   render() {
     const { loading, items, modalVisibility } = this.state;
-    // debugger;
-    console.log("Hello");
     const submitBtn = (
       <Button
         style="firstModalBtn"
