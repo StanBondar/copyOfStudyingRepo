@@ -3,15 +3,14 @@ import "./modal.scss";
 import propTypes from "prop-types";
 import Button from "../button/Button";
 
-class Modal extends React.Component {
-  render() {
+const Modal = (props) => {
     const {
       header,
       text,
       modalBodyStyle,
       modalHeaderStyle,
-    buttons
-    } = this.props;
+      buttons
+    } = props;
     
     return (
       <div className="modalBackground">
@@ -26,7 +25,6 @@ class Modal extends React.Component {
         </div>
       </div>
     );
-  }
 }
 
 export default Modal;
