@@ -1,17 +1,13 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 import Button from "../button/Button";
 import "./Cards.scss";
 
-class Card extends Component {
-  state = {
-    starFlag: true
-  };
+const Card = (props) => {
+  const [starFlag, setStarFlag] = useState(true)
 
-  render() {
-    const { starFlag } = this.state;
     const stars = [solidStar, regularStar];
     const {
       name,
@@ -22,17 +18,15 @@ class Card extends Component {
       id,
       items,
       action
-    } = this.props;
+    } = props;
 
     const itemsCopy = {...items};
 
-    function changeStar() {
-      this.setState({
-        starFlag: !this.state.starFlag
-      });
+    const changeStar = () => {
+      setStarFlag(!starFlag);
     }
 
-    function addToFavourites() {
+    const addToFavourites = () => {
       changeStar.call(this);
       let favourite = [];
       let includesIndicator = false;
@@ -44,7 +38,7 @@ class Card extends Component {
             favourite.splice(element, 1);
             includesIndicator = true;
             if (favourite.length === 0) {
-              localStorage.clear();
+              localStorage.removeItem("favourite");
             } else {
               localStorage.setItem("favourite", JSON.stringify(favourite));
             }
@@ -57,7 +51,7 @@ class Card extends Component {
       }
     }
 
-    function addToCart() {
+    const addToCart = () => {
       let inCart = [];
       let includesIndicator = false;
       if (localStorage.getItem("inCart")) {
@@ -102,7 +96,6 @@ class Card extends Component {
         </div>
       </section>
     );
-  }
 }
 
 export default Card;
