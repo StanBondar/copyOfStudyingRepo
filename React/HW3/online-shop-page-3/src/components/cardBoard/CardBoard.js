@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import "./CardBoard.scss";
 import Card from "../card/Card";
 
-class CardBoard extends Component {
-  render() {
-    const { items, action } = this.props;
+const CardBoard = (props) => {
+    const { items, action } = props;
     const cardsBundle = [];
     items.forEach(element => {
       const { name, price, imageURL, vendorCode, color, id } = element;
@@ -28,7 +27,6 @@ class CardBoard extends Component {
         {cardsBundle}
       </div>
     );
-  }
 }
 
 export default CardBoard;
