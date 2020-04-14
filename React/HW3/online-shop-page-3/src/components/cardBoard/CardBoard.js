@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import "./CardBoard.scss";
 import Card from "../card/Card";
+import cardBoardStyle from "./CardBoardStyle";
 
 const CardBoard = (props) => {
     const { items, action } = props;
@@ -21,9 +21,9 @@ const CardBoard = (props) => {
         />
       );
     });
-
+    const style = cardBoardStyle();
     return (
-      <div className="card-board">
+      <div className={style.cardBoard}>
         {cardsBundle}
       </div>
     );
