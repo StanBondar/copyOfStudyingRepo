@@ -3,7 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 import Button from "../button/Button";
-import "./Cards.scss";
+// import "./Cards.scss";
+import cardStyle from "./CardStyle";
 
 const Card = (props) => {
   const [starFlag, setStarFlag] = useState(true)
@@ -25,6 +26,8 @@ const Card = (props) => {
     const changeStar = () => {
       setStarFlag(!starFlag);
     }
+
+    const style = cardStyle();
 
     const addToFavourites = () => {
       changeStar.call(this);
@@ -77,14 +80,14 @@ const Card = (props) => {
     }
 
     return (
-      <section key={vendorNumber} className="card-wrapper">
-        <span className="vendor-number">{vendorNumber}</span>
-        <img className="card-item-img" src={imageURL} alt={name + "picture"} />
-        <h1 className="card-item-name">{name}</h1>
-        <div className="star-btn-wrapper">
-          <span className="card-item-price">{price + "UAH"}</span>
+      <section key={vendorNumber} className={style.cardWrapper}>
+        <span className={style.vendorNumber}>{vendorNumber}</span>
+        <img className={style.cardItemImg} src={imageURL} alt={name + "picture"} />
+        <h1 className={style.cardItemName}>{name}</h1>
+        <div className={style.starBtnWrapper}>
+          <span className={style.cardItemPrice}>{price + "UAH"}</span>
           <FontAwesomeIcon
-            className="card-item-star"
+            className={style.cardItemStar}
             icon={stars[+starFlag]}
             onClick={addToFavourites.bind(this)}
           />
