@@ -6,6 +6,8 @@ import CardBoard from "./components/cardBoard/CardBoard";
 import Modal from "./components/modal/Modal";
 import Button from "./components/button/Button";
 import Header from "./components/header/Header";
+import modalStyle from "./components/modal/ModalStyle";
+import buttonStyle from "./components/button/ButtonStyle";
 
 const App = () => {
   // state = {
@@ -13,6 +15,9 @@ const App = () => {
   //   items: [],
   //   modalVisibility: false
   // };
+
+  const modStyle = modalStyle();
+  const btnStyle = buttonStyle();
 
   const [loading, setLoading] = useState(true);
   const [items, setItems] = useState([]);
@@ -59,7 +64,7 @@ const App = () => {
     // const { loading, items, modalVisibility } = this.state;
     const submitBtn = (
       <Button
-        style="firstModalBtn"
+        style={btnStyle.button+" "+btnStyle.firstModalBtn}
         text="Ok"
         action={toggleModalVisibility.bind(this)}
       />
@@ -69,8 +74,8 @@ const App = () => {
       <Modal
         header="Success"
         text="Item added to cart 8)"
-        modalBodyStyle="secondModalBody"
-        modalHeaderStyle="secondModalHeader"
+        modalBodyStyle={modStyle.modalBody+" "+modStyle.secondModalBody}
+        modalHeaderStyle={modStyle.modalHeader+" "+modStyle.secondModalHeader}
         buttons={submitBtn}
       />
     );

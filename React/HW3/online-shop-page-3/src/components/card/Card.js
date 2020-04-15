@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar as solidStar } from "@fortawesome/free-solid-svg-icons";
 import { faStar as regularStar } from "@fortawesome/free-regular-svg-icons";
 import Button from "../button/Button";
-// import "./Cards.scss";
 import cardStyle from "./CardStyle";
+import buttonStyle from "../button/ButtonStyle";
 
 const Card = (props) => {
   const [starFlag, setStarFlag] = useState(true)
@@ -28,6 +28,7 @@ const Card = (props) => {
     }
 
     const style = cardStyle();
+    const btnStyle = buttonStyle();
 
     const addToFavourites = () => {
       changeStar.call(this);
@@ -93,7 +94,7 @@ const Card = (props) => {
           />
           <Button 
             text="Buy now" 
-            style="secondButton" 
+            style={btnStyle.button + " " + btnStyle.secondButton} 
             action={addToCart} 
           />
         </div>

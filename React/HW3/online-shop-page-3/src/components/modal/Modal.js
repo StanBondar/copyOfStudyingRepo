@@ -11,6 +11,7 @@ const Modal = (props) => {
       modalHeaderStyle,
       buttons
     } = props;
+
     
     return (
       <div className="modalBackground">
