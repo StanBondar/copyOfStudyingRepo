@@ -1,21 +1,16 @@
 import React, {useState, useEffect} from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import axios from "axios";
-import CardBoard from "./components/cardBoard/CardBoard";
+import CardBoard from "./pages/cardBoard/CardBoard";
 import Modal from "./components/modal/Modal";
 import Button from "./components/button/Button";
 import Header from "./components/header/Header";
 import modalStyle from "./components/modal/ModalStyle";
 import buttonStyle from "./components/button/ButtonStyle";
+import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
+import AppRoutes from "./Routes/AppRoutes";
 
 const App = () => {
-  // state = {
-  //   loading: true,
-  //   items: [],
-  //   modalVisibility: false
-  // };
-
   const modStyle = modalStyle();
   const btnStyle = buttonStyle();
 
@@ -23,45 +18,20 @@ const App = () => {
   const [items, setItems] = useState([]);
   const [modalVisibility, setModalVisibility] = useState(false);
 
-  const componentDidMount = () => {
-    localStorage.clear();
-    axios.get("/itemsCollection.json").then(response => {
-      setTimeout(() => {
-        // this.setState({
-        //   items: response.data,
-        //   loading: !this.state.loading
-        // });
-        debugger;
-        setItems(response.data);
-        setLoading(!loading);
-        console.log("State after loading", items);
-      }, 2000);
-    });
-  }
-
   useEffect(()=> {
-    localStorage.clear();
+    // localStorage.clear();
     axios.get("/itemsCollection.json").then(response => {
       setTimeout(() => {
-        // this.setState({
-        //   items: response.data,
-        //   loading: !this.state.loading
-        // });
         setItems(response.data);
         setLoading(!loading);
-        console.log("State after loading", items);
       }, 2000);
     });
   },[]);
 
   const toggleModalVisibility = () => {
-    // this.setState({
-    //   modalVisibility: !this.state.modalVisibility
-    // })
     setModalVisibility(!modalVisibility);
   }
 
-    // const { loading, items, modalVisibility } = this.state;
     const submitBtn = (
       <Button
         style={btnStyle.button+" "+btnStyle.firstModalBtn}
@@ -100,13 +70,14 @@ const App = () => {
         {loading ? (
           <p>Loading...</p>
         ) : (
-          <CardBoard 
-          items={items} 
-          action={toggleModalVisibility.bind(this)}
-          />
+          
+          <AppRoutes items={items} action={toggleModalVisibility.bind(this)}/>
+          
+          
         )}
         { modalVisibility&&modal }
       </div>
     )
+    
 }
 export default App;

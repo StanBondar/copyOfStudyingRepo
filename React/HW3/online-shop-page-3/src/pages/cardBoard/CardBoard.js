@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Card from "../card/Card";
+import Card from "../../components/card/Card";
 import cardBoardStyle from "./CardBoardStyle";
 
 const CardBoard = (props) => {

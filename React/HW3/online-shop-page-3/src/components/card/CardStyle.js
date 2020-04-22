@@ -10,7 +10,6 @@ const cardStyle = createUseStyles({
     flexDirection: "column",
     justifyContent: "space-around",
     alignItems: "center",
-    height: 300,
     minHeight: "fit-content",
     marginBottom: 30,
     padding: "1%",
